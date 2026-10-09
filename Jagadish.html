@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RK.S.S. Jagadish Ramayanam | Cyber Security Analyst & Data Engineer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              black: '#090d16',
+              card: '#0f172a',
+              border: '#1e293b',
+              neon: '#06b6d4',
+              accent: '#10b981',
+              warning: '#f59e0b',
+              danger: '#ef4444'
+            }
+          },
+          fontFamily: {
+            mono: ['"Fira Code"', 'monospace'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3);
+    }
+    .matrix-bg {
+      background-image: radial-gradient(rgba(6, 182, 212, 0.08) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    ::selection {
+      background-color: #06b6d4;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-[#0b1120] text-slate-200 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Background Grid Effect -->
+  <div class="fixed inset-0 matrix-bg pointer-events-none z-0"></div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0b1120]/80 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group font-mono font-bold text-lg text-slate-100 tracking-wider">
+        <span class="text-cyan-400 group-hover:rotate-12 transition-transform duration-300">⚡</span>
+        <span>JAGADISH<span class="text-cyan-400">.SEC</span></span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-7 text-sm font-mono text-slate-400">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">./about</a>
+        <a href="#experience" class="hover:text-cyan-400 transition-colors">./experience</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">./skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">./projects</a>
+        <a href="#terminal" class="hover:text-cyan-400 transition-colors">./terminal</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="mailto:ramayanamjagadish@gmail.com" class="hidden sm:inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase px-3.5 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500 hover:text-black transition-all">
+          <i data-lucide="shield-check" class="w-4 h-4"></i> Contact
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative z-10 pt-20 pb-16 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+      <div class="flex-1 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-mono text-cyan-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>VAPT Specialist &bull; Data Pipelines</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+           Jagadish <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400">
+            Ramayanam
+          </span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
+          VAPT-focused Cyber Security Analyst with hands-on experience in Web, API, Mobile, and Network Penetration Testing, coupled with enterprise Data Engineering and automation.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="https://github.com/hii923084" target="_blank" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm font-medium text-slate-200 transition-all">
+            <i data-lucide="github" class="w-4 h-4"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/ramayanam-jagadish" target="_blank" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm font-medium text-slate-200 transition-all">
+            <i data-lucide="linkedin" class="w-4 h-4 text-cyan-400"></i> LinkedIn
+          </a>
+          <a href="#projects" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all glow-cyan">
+            <i data-lucide="terminal" class="w-4 h-4"></i> View Toolkit & Work
+          </a>
+        </div>
+
+        <!-- Quick Contacts Bar -->
+        <div class="flex flex-wrap items-center gap-6 pt-4 text-xs font-mono text-slate-400 border-t border-slate-800/80">
+          <span class="flex items-center gap-1.5"><i data-lucide="mail" class="w-3.5 h-3.5 text-cyan-400"></i> ramayanamjagadish@gmail.com</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> +91 9553458347</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i> Hyderabad</span>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Terminal Card -->
+      <div class="w-full md:w-80 p-5 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl space-y-4 font-mono text-xs">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+          <span class="text-slate-400 text-[11px]">sec_status: ACTIVE</span>
+          <div class="flex gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+          </div>
+        </div>
+        <div class="space-y-2.5">
+          <div>
+            <div class="text-slate-500">Degree</div>
+            <div class="text-slate-200 font-semibold">B.Tech CSE (Cyber Security)</div>
+            <div class="text-emerald-400 text-[11px]">CGPA: 9.03 / 10.0</div>
+          </div>
+          <div>
+            <div class="text-slate-500">Primary Domains</div>
+            <div class="text-cyan-300">Web & API VAPT &bull; Data Pipelines</div>
+          </div>
+          <div>
+            <div class="text-slate-500">Key Accreditations</div>
+            <div class="text-slate-300">APIsec Certified Practitioner (ACP)</div>
+            <div class="text-slate-400 text-[11px]">RHCSA & CEH Trained</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="relative z-10 py-16 border-t border-slate-800/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+        <i data-lucide="briefcase" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight">Professional Experience</h2>
+        <p class="text-sm text-slate-400">Career timeline spanning VAPT operations and big data workflows</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Experience 1: Infosys -->
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 font-mono text-xs font-semibold">Dec 2025 – Present</span>
+            <span class="text-xs font-mono text-slate-400">India</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">System Engineer &mdash; Data Engineer</h3>
+          <div class="text-sm font-semibold text-cyan-400 mb-4">Infosys</div>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">&rsaquo;</span>
+              <span>Executed data processing and scalable transformations utilizing <strong>PySpark</strong> and optimized <strong>SQL</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">&rsaquo;</span>
+              <span>Architected and maintained data pipelines handling structured and semi-structured datasets.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">&rsaquo;</span>
+              <span>Created executive business intelligence dashboards and operational reports with <strong>Power BI</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">&rsaquo;</span>
+              <span>Performed pipeline performance tuning, schema validation, and data cleansing routines.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2">
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">PySpark</span>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">SQL</span>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Power BI</span>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Pipeline Optimization</span>
+        </div>
+      </div>
+
+      <!-- Experience 2: APTS -->
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-mono text-xs font-semibold">May 2025 – Nov 2025</span>
+            <span class="text-xs font-mono text-slate-400">Vijayawada, India</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">Security Analyst Intern (VAPT)</h3>
+          <div class="text-sm font-semibold text-emerald-400 mb-4">Andhra Pradesh Technology Services (APTS)</div>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 mt-1">&rsaquo;</span>
+              <span>Conducted vulnerability scanning, manual validation, and threat vector analysis across enterprise web & network infrastructures.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 mt-1">&rsaquo;</span>
+              <span>Discovered and cataloged <strong>OWASP Top 10</strong> vulnerabilities, preparing detailed impact reports and remediation guidance.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 mt-1">&rsaquo;</span>
+              <span>Conducted application security tests and supported infrastructure security hardening initiatives.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 mt-1">&rsaquo;</span>
+              <span>Collaborated with engineering teams to re-test patched vectors and strengthen overall security posture.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2">
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">OWASP Top 10</span>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">VAPT</span>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Burp Suite</span>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Enterprise Hardening</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="relative z-10 py-16 border-t border-slate-800/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="p-2 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-400">
+        <i data-lucide="cpu" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight">Technical Arsenal</h2>
+        <p class="text-sm text-slate-400">Tested tools, frameworks, and programming proficiencies</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
+        <div class="flex items-center gap-2 mb-3 text-cyan-400 font-mono text-sm font-semibold">
+          <i data-lucide="shield" class="w-4 h-4"></i>
+          <span>Security & Testing</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Web VAPT</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">API Testing</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Mobile Pentesting</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Network Auditing</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">OWASP Top 10</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">MITRE ATT&CK</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Patch Management</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
+        <div class="flex items-center gap-2 mb-3 text-emerald-400 font-mono text-sm font-semibold">
+          <i data-lucide="wrench" class="w-4 h-4"></i>
+          <span>Security Tooling</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Burp Suite</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">OWASP ZAP</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Nmap</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Nessus</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">OpenVAS</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Metasploit</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">SQLmap</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">MobSF</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Jadx</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Wireshark</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
+        <div class="flex items-center gap-2 mb-3 text-teal-400 font-mono text-sm font-semibold">
+          <i data-lucide="database" class="w-4 h-4"></i>
+          <span>Data & Languages</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Python</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">PySpark</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">SQL</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Java</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Power BI</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">ETL Pipelines</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
+        <div class="flex items-center gap-2 mb-3 text-amber-400 font-mono text-sm font-semibold">
+          <i data-lucide="server" class="w-4 h-4"></i>
+          <span>Platforms & Cloud</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Linux (RHEL / Debian)</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Windows Server</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Microsoft Azure</span>
+          <span class="px-2.5 py-1 text-xs bg-slate-800/90 rounded border border-slate-700 text-slate-300">Git / GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Project Section -->
+  <section id="projects" class="relative z-10 py-16 border-t border-slate-800/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="p-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
+        <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight">Key Security Project</h2>
+        <p class="text-sm text-slate-400">Automated Offensive Security Tooling</p>
+      </div>
+    </div>
+
+    <!-- Scanhere4u Spotlight Box -->
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 p-6 sm:p-8">
+      <div class="flex flex-col lg:flex-row justify-between gap-8">
+        <div class="flex-1 space-y-4">
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-3 py-1 rounded-md">
+            <span>CORE REPOSITORY</span> &bull; <span>PYTHON AUTOMATION</span>
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Scanhere4u <span class="text-slate-500 text-lg font-mono font-normal">&mdash; Automated Penetration Testing Framework</span>
+          </h3>
+
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Engineered a Python-based end-to-end vulnerability scanning and correlation framework that orchestrates active host discovery, port probing, and web vulnerability auditing by unifying <strong>Nmap</strong>, <strong>OWASP ZAP</strong>, and live <strong>CVE databases</strong>.
+          </p>
+
+          <div class="space-y-2 text-sm text-slate-400">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 mt-1 shrink-0"></i>
+              <span>Automates multi-phase vulnerability discovery with CVE correlation algorithms.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 mt-1 shrink-0"></i>
+              <span>Generates structured vulnerability documentation in automated PDF and JSON reporting formats.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 mt-1 shrink-0"></i>
+              <span>Significantly trims engagement cycles through synchronized scanner pipelines.</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 border border-slate-700 text-slate-300">Python 3</span>
+            <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 border border-slate-700 text-slate-300">Nmap API</span>
+            <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 border border-slate-700 text-slate-300">OWASP ZAP</span>
+            <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 border border-slate-700 text-slate-300">CVE Feeds</span>
+            <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 border border-slate-700 text-slate-300">PDF/JSON Exporter</span>
+          </div>
+        </div>
+
+        <!-- Terminal preview box for Scanhere4u -->
+        <div class="w-full lg:w-96 rounded-xl bg-black/80 border border-slate-800 font-mono text-xs p-4 flex flex-col justify-between shadow-inner">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800 text-slate-500">
+            <span>scanhere4u_engine.py</span>
+            <span>bash</span>
+          </div>
+          <div class="py-4 space-y-1.5 text-slate-400 leading-relaxed font-mono">
+            <div class="text-cyan-400">$ python3 scanhere4u.py -t target.local --deep</div>
+            <div class="text-slate-500">[i] Initializing Nmap SYN stealth scan...</div>
+            <div class="text-emerald-400">[+] Found Open: 80, 443, 8080 (API endpoint)</div>
+            <div class="text-slate-500">[i] Triggering OWASP ZAP automated spider...</div>
+            <div class="text-amber-400">[!] Identified: Broken Object Level Auth (BOLA)</div>
+            <div class="text-slate-500">[i] Correlating CVE vectors... Done.</div>
+            <div class="text-cyan-300">[✓] Report compiled: scan_report_2026.pdf</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Section -->
+  <section id="terminal" class="relative z-10 py-16 border-t border-slate-800/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="p-2 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400">
+        <i data-lucide="terminal" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight">Interactive Terminal Shell</h2>
+        <p class="text-sm text-slate-400">Try commands: <code class="text-cyan-400">help</code>, <code class="text-cyan-400">skills</code>, <code class="text-cyan-400">certs</code>, <code class="text-cyan-400">achievements</code>, <code class="text-cyan-400">contact</code>, or <code class="text-cyan-400">clear</code></p>
+      </div>
+    </div>
+
+    <!-- Terminal Window -->
+    <div class="rounded-2xl bg-black/90 border border-slate-800 font-mono text-sm shadow-2xl overflow-hidden">
+      <div class="bg-slate-900/80 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-2 text-xs text-slate-400">guest@jagadish-security-terminal:~</span>
+        </div>
+        <span class="text-[11px] text-slate-500 font-mono">v2.4-stable</span>
+      </div>
+
+      <div id="terminal-body" class="p-4 space-y-2 max-h-80 overflow-y-auto text-slate-300">
+        <div class="text-slate-400">Type <span class="text-cyan-400 font-bold">help</span> to inspect available terminal commands.</div>
+      </div>
+
+      <form id="terminal-form" class="p-3 border-t border-slate-800/80 flex items-center gap-2 bg-slate-950/50" onsubmit="handleTerminal(event)">
+        <span class="text-cyan-400 font-bold pl-2">&gt;</span>
+        <input 
+          id="terminal-input" 
+          type="text" 
+          placeholder="enter command (e.g. skills, certs, achievements)..." 
+          autocomplete="off"
+          class="w-full bg-transparent text-cyan-300 font-mono text-sm focus:outline-none placeholder:text-slate-600"
+        />
+      </form>
+    </div>
+  </section>
+
+  <!-- Certifications, Training & Achievements -->
+  <section class="relative z-10 py-16 border-t border-slate-800/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Certifications -->
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="flex items-center gap-2 mb-4 text-cyan-400 font-mono text-sm font-semibold">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Certifications</span>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-white">APIsec Certified Practitioner (ACP)</div>
+              <div class="text-xs text-slate-500">API Security & Validation</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-white">Networking & Security Fundamentals</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-white">Vulnerability Analysis & Management Basics</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-white">Linux Network Administration</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Professional Training -->
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="flex items-center gap-2 mb-4 text-emerald-400 font-mono text-sm font-semibold">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Professional Training</span>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2">
+            <i data-lucide="terminal" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-white">RHCSA</div>
+              <div class="text-xs text-slate-400">Red Hat Certified System Administrator</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-white">CEH</div>
+              <div class="text-xs text-slate-400">Certified Ethical Hacker</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-8 pt-4 border-t border-slate-800">
+          <div class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-1">Education</div>
+          <div class="text-sm font-bold text-white">B.Tech - CSE (Cyber Security)</div>
+          <div class="text-xs text-slate-400">VIT-AP University, Amaravati (2021-2025)</div>
+          <div class="text-xs text-emerald-400 font-mono mt-1 font-semibold">CGPA: 9.03 / 10</div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="flex items-center gap-2 mb-4 text-amber-400 font-mono text-sm font-semibold">
+          <i data-lucide="trophy" class="w-4 h-4"></i>
+          <span>Key Achievements</span>
+        </div>
+        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
+          <span class="text-xs font-mono uppercase font-bold text-amber-400">HackathonX Semi-Finals</span>
+          <h4 class="text-base font-bold text-white mt-1">Runner-Up </h4>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Led <strong>Team PyCODE</strong> in rigorous Capture-the-Flag (CTF) and bug-hunting competitions concentrating on enterprise web application security flaws.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-10 border-t border-slate-800 text-center font-mono text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        &copy; 2026 RK.S.S. Jagadish Ramayanam &bull; All Systems Secured.
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="https://github.com/hii923084" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/ramayanam-jagadish" target="_blank" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+        <a href="mailto:ramayanamjagadish@gmail.com" class="hover:text-cyan-400 transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide Icons, CVSS Calculator, & Terminal Logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Terminal Emulator Logic
+    function handleTerminal(e) {
+      e.preventDefault();
+      const inputEl = document.getElementById('terminal-input');
+      const cmd = inputEl.value.trim().toLowerCase();
+      const body = document.getElementById('terminal-body');
+
+      if (!cmd) return;
+
+      // Echo User Command
+      const userLine = document.createElement('div');
+      userLine.innerHTML = `<span class="text-cyan-400">&gt;</span> <span class="text-white">${escapeHtml(cmd)}</span>`;
+      body.appendChild(userLine);
+
+      // Output Response
+      const respLine = document.createElement('div');
+      respLine.className = 'text-slate-300 pl-3 border-l-2 border-slate-700 my-1';
+
+      switch (cmd) {
+        case 'help':
+          respLine.innerHTML = `Available commands:<br>
+          - <span class="text-cyan-400">skills</span>: Summary of tools and security proficiencies<br>
+          - <span class="text-cyan-400">experience</span>: Work history (Infosys, APTS)<br>
+          - <span class="text-cyan-400">certs</span>: List of industry credentials & trainings<br>
+          - <span class="text-cyan-400">achievements</span>: Competitions & hackathon awards<br>
+          - <span class="text-cyan-400">contact</span>: Direct communication info<br>
+          - <span class="text-cyan-400">clear</span>: Clear terminal console`;
+          break;
+
+        case 'skills':
+          respLine.innerHTML = `<span class="text-emerald-400">VAPT:</span> Web, API, Mobile, Network Pentesting, OWASP Top 10, MITRE ATT&CK<br>
+          <span class="text-emerald-400">Tools:</span> Burp Suite, OWASP ZAP, Nmap, Nessus, OpenVAS, Metasploit, SQLmap, MobSF, Jadx, Wireshark<br>
+          <span class="text-emerald-400">Data/Code:</span> Python, PySpark, SQL, Power BI, Java`;
+          break;
+
+        case 'experience':
+          respLine.innerHTML = `<span class="text-cyan-400">[Dec 2025 - Present]</span> System Engineer @ Infosys (PySpark, SQL, Power BI)<br>
+          <span class="text-cyan-400">[May 2025 - Nov 2025]</span> Security Analyst Intern @ APTS (VAPT, OWASP Top 10)`;
+          break;
+
+        case 'certs':
+          respLine.innerHTML = `- APIsec Certified Practitioner (ACP)<br>
+          - Networking & Security Fundamentals<br>
+          - Vulnerability Analysis & Management Basics<br>
+          - Linux Network Administration<br>
+          - Trained in: RHCSA & CEH`;
+          break;
+
+        case 'achievements':
+          respLine.innerHTML = `Runner-Up - HackathonX Semi-Finals. Led Team PyCODE in CTF and web application security bug hunts.`;
+          break;
+
+        case 'contact':
+          respLine.innerHTML = `Email: ramayanamjagadish@gmail.com<br>Phone: +91 9553458347<br>LinkedIn: linkedin.com/in/ramayanam-jagadish<br>GitHub: github.com/hii923084`;
+          break;
+
+        case 'clear':
+          body.innerHTML = '';
+          inputEl.value = '';
+          return;
+
+        default:
+          respLine.innerHTML = `<span class="text-red-400">Command not found: "${escapeHtml(cmd)}".</span> Type <span class="text-cyan-400">help</span> for assistance.`;
+          break;
+      }
+
+      body.appendChild(respLine);
+      inputEl.value = '';
+      body.scrollTop = body.scrollHeight;
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+  </script>
+</body>
+</html>
